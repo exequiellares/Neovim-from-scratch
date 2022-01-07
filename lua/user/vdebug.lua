@@ -9,8 +9,8 @@ vim.g.vdebug_options = {
 
 vim.cmd [[
   let g:vdebug_options['path_maps'] = {
-    \ '/var/www/html': '/home/exequiel/projects/summa/cetrogar-mariadb-m2',
-    \ '/var/www/html/pub': '/home/exequiel/projects/summa/cetrogar-mariadb-m2/pub'
+    \ '/var/www/html': '/home/exequiel/projects/summa/cetrogar-m2',
+    \ '/var/www/html/pub': '/home/exequiel/projects/summa/cetrogar-m2/pub'
   \}
 ]]
 -- vim.g.vdebug_options["path_maps"]["/var/www/html/"] = "/home/exequiel/projects/summa/cetrogar-mariadb-m2"
