@@ -60,7 +60,6 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
 
   -- Markdown Preview
-  -- use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
   use "iamcco/markdown-preview.nvim"
 
   -- Colorschemes
