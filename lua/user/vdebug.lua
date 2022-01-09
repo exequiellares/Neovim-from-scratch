@@ -1,20 +1,21 @@
+local utils_status_ok, utils = pcall(require, "local-utils")
+if not utils_status_ok then
+	return
+end
+
+-- Map Magento directories
+
+local path_maps = "{'/var/www/html': '" .. utils.get_full_path('') .. "', '/var/www/html/pub': '" .. utils.get_full_path('/pub') .. "'}"
+local config_path_maps = "let g:vdebug_options['path_maps'] = " .. path_maps
+
+
 vim.g.vdebug_options = {
   port= 9000,
-  watch_window_style = "compact",
---  path_maps = nil
-  --     "/var/www/html" = "/home/exequiel/projects/summa/cetrogar-mariadb-m2",
-  --     "/var/www/html/pub" = "/home/exequiel/projects/summa/cetrogar-mariadb-m2/pub",
-  -- },
+  watch_window_style = "compact"
 }
 
-vim.cmd [[
-  let g:vdebug_options['path_maps'] = {
-    \ '/var/www/html': '/home/exequiel/projects/summa/cetrogar-m2',
-    \ '/var/www/html/pub': '/home/exequiel/projects/summa/cetrogar-m2/pub'
-  \}
-]]
--- vim.g.vdebug_options["path_maps"]["/var/www/html/"] = "/home/exequiel/projects/summa/cetrogar-mariadb-m2"
--- print(vim.g.vdebug_options)
+vim.cmd(config_path_maps)
+
 -- vim.g.vdebug_options = {}
     -- \    'port' : 9000,
     -- \    'timeout' : 20,
