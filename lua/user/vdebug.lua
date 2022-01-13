@@ -11,7 +11,8 @@ local config_path_maps = "let g:vdebug_options['path_maps'] = " .. path_maps
 
 vim.g.vdebug_options = {
   port= 9000,
-  watch_window_style = "compact"
+  watch_window_style = "expanded",
+  break_on_open = 0,
 }
 
 vim.cmd(config_path_maps)
